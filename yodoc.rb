@@ -6,13 +6,13 @@ class Yodoc < Formula
   desc "Test command results and embed them into document
 "
   homepage "https://github.com/suzuki-shunsuke/yodoc"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/suzuki-shunsuke/yodoc/releases/download/v0.1.1/yodoc_darwin_amd64.tar.gz"
-      sha256 "cbda7d889700639f7bd337db42f27112f954c1bf1e64b49be51d7397a9c7c55e"
+      url "https://github.com/suzuki-shunsuke/yodoc/releases/download/v0.1.2/yodoc_darwin_amd64.tar.gz"
+      sha256 "e0476e412adc194614aa7686ef5fe1ff9de02e1a7d25ec5f416baca7c3e94a2c"
 
       def install
         bin.install "yodoc"
@@ -20,8 +20,8 @@ class Yodoc < Formula
       end
     end
     on_arm do
-      url "https://github.com/suzuki-shunsuke/yodoc/releases/download/v0.1.1/yodoc_darwin_arm64.tar.gz"
-      sha256 "18c24de90c799756e994042481c31d0204e08719c9bcc2fd341e05f9177c0830"
+      url "https://github.com/suzuki-shunsuke/yodoc/releases/download/v0.1.2/yodoc_darwin_arm64.tar.gz"
+      sha256 "f4209a3663305f3f2147cc183012d21a1390f7c62ce8de358496c45c1f5fd7b9"
 
       def install
         bin.install "yodoc"
@@ -33,8 +33,8 @@ class Yodoc < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/suzuki-shunsuke/yodoc/releases/download/v0.1.1/yodoc_linux_amd64.tar.gz"
-        sha256 "d15a9b7c7ea5af0a597816d50ee554e4d99e2e9288db4c87e61a3e1af8794696"
+        url "https://github.com/suzuki-shunsuke/yodoc/releases/download/v0.1.2/yodoc_linux_amd64.tar.gz"
+        sha256 "e8317dbe3ed267423a56f41963bee96da5f6adfb47ec48bc9c37c17ad13615c7"
 
         def install
           bin.install "yodoc"
@@ -44,8 +44,8 @@ class Yodoc < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/suzuki-shunsuke/yodoc/releases/download/v0.1.1/yodoc_linux_arm64.tar.gz"
-        sha256 "5a31775539e6d9e1c348ee83a9f08e4990dc04943cdb677156aca473d4a26370"
+        url "https://github.com/suzuki-shunsuke/yodoc/releases/download/v0.1.2/yodoc_linux_arm64.tar.gz"
+        sha256 "9c3afc0a6370a0322842595d09c5be8819356b09fad1e12ec904915a886cd47a"
 
         def install
           bin.install "yodoc"
