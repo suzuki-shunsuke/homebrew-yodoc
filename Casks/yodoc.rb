@@ -3,7 +3,7 @@ cask "yodoc" do
   desc "Test command results and embed them into document
 "
   homepage "https://github.com/suzuki-shunsuke/yodoc"
-  version "0.1.5"
+  version "1.0.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -13,28 +13,28 @@ cask "yodoc" do
 
   on_macos do
     on_intel do
-      url "https://github.com/suzuki-shunsuke/yodoc/releases/download/v0.1.5/yodoc_darwin_amd64.tar.gz"
-      sha256 "8aa01b7eb9c89678bdc595eebb099a8ed4554a6f9a7d426e06a413f179407ce4"
+      url "https://github.com/suzuki-shunsuke/yodoc/releases/download/v1.0.0/yodoc_darwin_amd64.tar.gz"
+      sha256 "1de29c92cf7076ec1bb063ae307d1c689ecbc10a5bfcc0ef3ee4bde40c409d54"
     end
     on_arm do
-      url "https://github.com/suzuki-shunsuke/yodoc/releases/download/v0.1.5/yodoc_darwin_arm64.tar.gz"
-      sha256 "aae72fd47ce1418bb61024448a8a0b97dcd655725d9d680f0da6acf50df4f4ac"
+      url "https://github.com/suzuki-shunsuke/yodoc/releases/download/v1.0.0/yodoc_darwin_arm64.tar.gz"
+      sha256 "c87fbd865c043c45d0a685df56a06a249e63e84e1244ad13dc6cc1511ad8f329"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/suzuki-shunsuke/yodoc/releases/download/v0.1.5/yodoc_linux_amd64.tar.gz"
-      sha256 "90b33275ccc07a897b1a99134906a267736fa8ec6f4de56d36f109b4b6944d7f"
+      url "https://github.com/suzuki-shunsuke/yodoc/releases/download/v1.0.0/yodoc_linux_amd64.tar.gz"
+      sha256 "7cd20caa4f7f2e3da16bfbba38a21d02592acfd2b4dd685b360b3130e54b550d"
     end
     on_arm do
-      url "https://github.com/suzuki-shunsuke/yodoc/releases/download/v0.1.5/yodoc_linux_arm64.tar.gz"
-      sha256 "6f4e1f6d026ca66142f3b8b4f2e9789089f687c9abcd1cac9f687a80b5ee7ced"
+      url "https://github.com/suzuki-shunsuke/yodoc/releases/download/v1.0.0/yodoc_linux_arm64.tar.gz"
+      sha256 "839c2ee18f4b948326becc53952e66955fccd57607f6fed0f359795e71ea50e8"
     end
   end
 
   postflight do
-    if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
+    if OS.mac?
       system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/yodoc"]
     end
   end
